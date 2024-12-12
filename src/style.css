@@ -38,4 +38,7 @@ body {
     width: 120px;
     cursor: pointer;
     transition: transform 0.8s ease, opacity 0.8s ease;
+    user-select: none; /* Prevent selection */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For Internet Explorer/Edge */
 }
