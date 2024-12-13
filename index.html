@@ -4,16 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
     <div class="orange top"></div>
     <div class="orange bottom"></div>
-
     <div class="main-content">
         <img class="laranja" src="./src/assets/images/orange-svgrepo-com.svg" />
+        <div class="text-content">
+            <p>oi</p>
+        </div>
     </div>
 
-    <script src="./src/script.js"></script>
+    
+    <script>
+        const laranja = document.querySelector(".laranja");
+        const maintext = document.querySelector(".text-content")
+        const topDiv = document.querySelector(".orange.top");
+        const bottomDiv = document.querySelector(".orange.bottom");
+
+        console.log(laranja)
+        
+
+        laranja.addEventListener("click", () => {
+            // Animate the orange SVG
+            laranja.style.transform = "rotate(360deg) scale(1.5)";
+            laranja.style.opacity = "0";
+
+            // Animate the top and bottom divs
+            setTimeout(() => {
+                topDiv.style.transform = "translateY(-100%)";
+                bottomDiv.style.transform = "translateY(100%)";
+            }, 400);
+
+            setTimeout(() => {
+                laranja.style.display = "none";
+                maintext.style.opacity = "1";
+                maintext.style.transform = "scale(1)"; // Bring it back to normal size
+            }, 800); 
+        });
+    </script>
 </body>
 </html>

@@ -40,5 +40,21 @@ body {
     transition: transform 0.8s ease, opacity 0.8s ease;
     user-select: none; /* Prevent selection */
     -webkit-user-select: none; /* For Safari */
-    -ms-user-select: none; /* For Internet Explorer/Edge */
+    -ms-user-select: none;
+    transform: translateX(125%);
+    z-index: 2;
+}
+
+
+.text-content {
+    height: 100%;
+    width: 100%;
+    display: flex; /* Use flex for centering content */
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially invisible */
+    transform: scale(0.9); /* Slightly smaller for a smoother entry effect */
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    background-color: #0B192C;
+    color: white;
 }
