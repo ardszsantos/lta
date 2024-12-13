@@ -41,7 +41,7 @@ body {
     user-select: none; /* Prevent selection */
     -webkit-user-select: none; /* For Safari */
     -ms-user-select: none;
-    transform: translateX(125%);
+    position: absolute;
     z-index: 2;
 }
 
